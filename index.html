@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>South African War | Interactive Virtual Tour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand-mark">1899–1902</div>
+  <div>
+    <p class="eyebrow">GRADE 10 HISTORY · INTERACTIVE FIELD GUIDE</p>
+    <h1>The South African War</h1>
+  </div>
+  <button id="overviewBtn" class="outline-btn">Back to overview</button>
+</header>
+
+<main class="layout">
+  <section class="map-panel">
+    <div class="panel-heading">
+      <div><p class="eyebrow">EXPLORE THE PAST</p><h2>Map of southern Africa</h2></div>
+      <span class="map-tag">1899–1902 · schematic</span>
+    </div>
+    <p class="map-instructions">Select a numbered location to zoom in and open its story. Use the + / − controls to explore the map.</p>
+    <div class="map-wrap">
+      <svg id="historyMap" viewBox="0 0 700 620" role="img" aria-label="Schematic map of the four main territories and South African War locations">
+        <rect width="700" height="620" rx="18" fill="#e8e4d7"/>
+        <path d="M65 58 L290 42 L345 120 L305 210 L220 250 L150 225 L80 155 Z" class="territory cape"/>
+        <path d="M290 42 L490 68 L535 155 L465 225 L385 210 L345 120 Z" class="territory transvaal"/>
+        <path d="M305 210 L385 210 L465 225 L430 310 L345 325 L285 285 L220 250 Z" class="territory orange"/>
+        <path d="M465 225 L535 155 L600 245 L580 365 L520 405 L470 350 L430 310 Z" class="territory natal"/>
+        <path d="M80 155 L150 225 L220 250 L285 285 L345 325 L430 310 L470 350 L520 405 L480 500 L365 555 L240 520 L145 440 L90 325 Z" class="territory other"/>
+        <path d="M65 58 L290 42 L490 68 L535 155 L600 245 L580 365 L520 405 L480 500 L365 555 L240 520 L145 440 L90 325 L80 155 Z" class="borderline"/>
+        <text x="145" y="120" class="territory-label">CAPE COLONY</text>
+        <text x="390" y="105" class="territory-label">SOUTH AFRICAN</text><text x="410" y="123" class="territory-label">REPUBLIC</text><text x="422" y="141" class="territory-label">(TRANSVAAL)</text>
+        <text x="300" y="270" class="territory-label">ORANGE FREE STATE</text>
+        <text x="500" y="285" class="territory-label">NATAL</text>
+        <text x="160" y="470" class="sea-label">Schematic territorial outline — not a survey map</text>
+        <g id="routeLayer"></g>
+        <g id="markers"></g>
+      </svg>
+      <div class="zoom-controls"><button id="zoomIn" aria-label="Zoom in">+</button><button id="zoomOut" aria-label="Zoom out">−</button></div>
+      <button id="resetMap" class="reset-map">Reset map</button>
+    </div>
+    <div class="legend">
+      <span><i class="dot cause"></i> Causes and build-up</span>
+      <span><i class="dot battle"></i> Battles and military events</span>
+      <span><i class="dot occupation"></i> Occupation / political sites</span>
+      <span><i class="dot camp"></i> Concentration camps</span>
+    </div>
+    <div class="map-note"><strong>Map note:</strong> This is a clickable, schematic teaching map showing the four main territories. It is not a geographically exact boundary map. For formal assessment, compare it with a reliable historical atlas.</div>
+  </section>
+
+  <aside class="story-panel" aria-live="polite">
+    <div id="storyContent"></div>
+  </aside>
+</main>
+<footer>Learning through historical evidence · Check source credits and image permissions before public distribution.</footer>
+<script src="tour.js"></script>
+</body>
+</html>
